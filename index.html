@@ -182,6 +182,16 @@
         { data: ["猴","蛇","龙","兔","虎","鼠"], count: 4 }
       ]
     },
+    单双4肖: {
+      id: "output单双4肖",
+      title: "单双4肖",
+      format: (ky, 单肖, 双肖) =>
+        `<p>${String(ky).padStart(3,'0')}期:单【<span style="color: red;">${单肖}</span>】双【<span style="color: red;">${双肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
+      groups: [
+        { data: ["龙","虎","鼠","狗","猴","马"], count: 4 },
+        { data: ["兔","牛","猪","鸡","羊","蛇"], count: 4 }
+      ]
+    },
     家禽野兽4肖: {
       id: "output家禽野兽4肖",
       title: "家禽野兽4肖",
