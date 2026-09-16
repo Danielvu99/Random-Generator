@@ -554,7 +554,8 @@
 	    { data: ["合单","合双"], count: 1 },  // chọn to/nhỏ
 	    { data: ["兔","蛇","羊","鸡","猪","鼠","牛","虎","龙","马","猴","狗"], count: 2 } // chọn 2 con từ pool
 	  ]
-	},	男女两肖: {
+	},	
+	  男女两肖: {
 	  id: "output男女两肖",
 	  title: "男女两肖",
 	  format: (ky, 男女, 男肖, 女肖) => {
@@ -566,6 +567,20 @@
 	    { data: ["男肖","女肖"], count: 1 },            
 	    { data: ["鼠","牛","虎","龙","马","猴","狗"], count: 2 }, // pool của 男肖
 	    { data: ["兔","蛇","羊","鸡","猪"], count: 2 }  // pool của 女肖
+	  ]
+	},
+	  胆大胆小两肖: {
+	  id: "output胆大胆小两肖",
+	  title: "胆大胆小两肖",
+	  format: (ky, 胆大胆小, 胆大, 胆小) => {
+	    const animalsRaw = (胆大胆小 === "胆大") ? 胆小 : 胆大;
+	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：胆大胆小两肖</font><font color="#ff0000">【${胆大胆小}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	  },
+	  groups: [
+	    { data: ["胆大","胆小"], count: 1 },            
+	    { data: ["牛","虎","马","猴","狗","猪"], count: 2 }, // pool của 胆大
+	    { data: ["鼠","蛇","龙","羊","鸡","兔"], count: 2 }  // pool của 胆小
 	  ]
 	},
 	家野两肖: {
