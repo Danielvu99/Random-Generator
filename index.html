@@ -259,7 +259,7 @@
 	    // nếu chọn 单笔 thì lấy 2 con từ pool 双笔 và ngược lại
 	    const animalsRaw = (单双笔 === "单笔") ? 双笔 : 单笔;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双笔+2肖<font color="#ff0000">【${单双笔}+${animals}】</font>开</font><font color="#ff0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双笔+2肖<font color="#ff0000">【${单双笔}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["单笔","双笔"], count: 1 },            // chọn nhãn
@@ -561,7 +561,7 @@
 	  format: (ky, 男女, 男肖, 女肖) => {
 	    const animalsRaw = (男女 === "男肖") ? 女肖 : 男肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：男女两肖</font><font color="#ff0000">【${男女}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：男女两肖<font color="#ff0000">【${男女}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["男肖","女肖"], count: 1 },            
@@ -575,7 +575,7 @@
 	  format: (ky, 胆大胆小, 胆大, 胆小) => {
 	    const animalsRaw = (胆大胆小 === "胆大") ? 胆小 : 胆大;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：胆大胆小两肖</font><font color="#ff0000">【${胆大胆小}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：胆大胆小两肖<font color="#ff0000">【${胆大胆小}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["胆大","胆小"], count: 1 },            
@@ -589,7 +589,7 @@
 	  format: (ky, 家野, 家禽, 野兽) => {
 	    const animalsRaw = (家野 === "家禽") ? 野兽 : 家禽;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：家野两肖</font><font color="#ff0000">【${家野}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：家野两肖<font color="#ff0000">【${家野}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["家禽","野兽"], count: 1 },            
@@ -603,7 +603,7 @@
 	  format: (ky, 独合, 独肖, 合肖) => {
 	    const animalsRaw = (独合 === "独肖") ? 合肖 : 独肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖</font><font color="#ff0000">【${独合}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖<font color="#ff0000">【${独合}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["独肖","合肖"], count: 1 },            
@@ -617,7 +617,7 @@
 	  format: (ky, 吉凶, 吉肖, 凶肖) => {
 	    const animalsRaw = (吉凶 === "吉肖") ? 凶肖 : 吉肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：吉美凶丑两肖</font><font color="#ff0000">【${吉凶}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：吉美凶丑两肖<font color="#ff0000">【${吉凶}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["吉肖","凶肖"], count: 1 },            
@@ -631,7 +631,7 @@
 	  format: (ky, 前后, 前肖, 后肖) => {
 	    const animalsRaw = (前后 === "前肖") ? 后肖 : 前肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：前后两肖</font><font color="#ff0000">【${前后}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：前后两肖<font color="#ff0000">【${前后}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["前肖","后肖"], count: 1 },            
@@ -645,7 +645,7 @@
 	  format: (ky, 阴阳, 阴肖, 阳肖) => {
 	    const animalsRaw = (阴阳 === "阴肖") ? 阳肖 : 阴肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：阴阳两肖</font><font color="#ff0000">【${阴阳}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：阴阳两肖<font color="#ff0000">【${阴阳}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["阴肖","阳肖"], count: 1 },            
@@ -659,7 +659,7 @@
 	  format: (ky, 独合, 独肖, 合肖) => {
 	    const animalsRaw = (独合 === "独肖") ? 合肖 : 独肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖</font><font color="#ff0000">【${独合}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖<font color="#ff0000">【${独合}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["独肖","合肖"], count: 1 },            
@@ -673,7 +673,7 @@
 	  format: (ky, 单双, 单肖, 双肖) => {
 	    const animalsRaw = (单双 === "单肖") ? 双肖 : 单肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双两肖</font><font color="#ff0000">【${单双}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双两肖<font color="#ff0000">【${单双}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["单肖","双肖"], count: 1 },            
@@ -687,7 +687,7 @@
 	  format: (ky, 上下, 上肖, 下肖) => {
 	    const animalsRaw = (上下 === "上肖") ? 下肖 : 上肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：上下两肖</font><font color="#ff0000">【${上下}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：上下两肖<font color="#ff0000">【${上下}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["上肖","下肖"], count: 1 },            
@@ -701,7 +701,7 @@
 	  format: (ky, 有无, 有肖, 无肖) => {
 	    const animalsRaw = (有无 === "有肖") ? 无肖 : 有肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：有无两肖</font><font color="#ff0000">【${有无}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：有无两肖<font color="#ff0000">【${有无}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["有肖","无肖"], count: 1 },            
@@ -715,7 +715,7 @@
 	  format: (ky, 天地, 天肖, 地肖) => {
 	    const animalsRaw = (天地 === "天肖") ? 地肖 : 天肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：天地两肖</font><font color="#ff0000">【${天地}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：天地两肖<font color="#ff0000">【${天地}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["天肖","地肖"], count: 1 },            
@@ -743,7 +743,7 @@
 	  format: (ky, 黑白, 黑肖, 白肖) => {
 	    const animalsRaw = (黑白 === "黑肖") ? 白肖 : 黑肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：黑白两肖</font><font color="#ff0000">【${黑白}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：黑白两肖<font color="#ff0000">【${黑白}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["黑肖","白肖"], count: 1 },            
@@ -757,7 +757,7 @@
 	  format: (ky, 日夜, 日肖, 夜肖) => {
 	    const animalsRaw = (日夜 === "日肖") ? 夜肖 : 日肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：日夜两肖</font><font color="#ff0000">【${日夜}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：日夜两肖<font color="#ff0000">【${日夜}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["日肖","夜肖"], count: 1 },            
