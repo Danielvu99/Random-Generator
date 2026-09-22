@@ -729,7 +729,7 @@
 	  format: (ky, 左右, 左肖, 右肖) => {
 	    const animalsRaw = (左右 === "左肖") ? 右肖 : 左肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：左右两肖</font><font color="#ff0000">【${左右}+${animals}】</font>开</font><font color="#FF0000">:？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：左右两肖<font color="#ff0000">【${左右}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["左肖","右肖"], count: 1 },            
