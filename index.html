@@ -427,6 +427,21 @@
 	    { data: ["兔","蛇","羊","鸡","猪","鼠","牛","虎","龙","马","猴","狗"], count: 2 } // chọn 2 con từ pool
 	  ]
 	},
+  单双三尾: {
+    id: "output单双三尾",
+    title: "单双三尾",
+    format: (ky, 单Str, 双Str) => {
+      // Tách các chữ số, sắp xếp tăng dần, nối bằng dấu chấm
+      const 单 = String(单Str).replace(/\D/g, "").split("").sort((a,b)=>a-b).join(".");
+      const 双 = String(双Str).replace(/\D/g, "").split("").sort((a,b)=>a-b).join(".");
+      return `<p style="font-size: 12pt; line-height: 30px; color: #555555; font-weight: bold;">${String(ky).padStart(3,'0')}期：<font color="#6387CD">【单双三尾】</font>开:<font color="#ff0000">？00准</font><br><font color="#ff0000">【单:${单}】【双:${双}】</font></p>\n<hr>\n`;
+    },
+    groups: [
+      { data: ["1","3","5","7","9"], count: 3 },
+      { data: ["0","2","4","6","8"], count: 3 }
+    ]
+  },
+
       春夏秋冬: {
       id: "output春夏秋冬",
       title: "春夏秋冬",
@@ -654,8 +669,8 @@
 	文武两肖: {
 	  id: "output文武两肖",
 	  title: "文武两肖",
-	  format: (ky, 文官, 文官, 武将) => {
-	    const animalsRaw = (文武 === "文官") ? 武将 : 文官;
+	  format: (ky, 文武, 文官, 武将) => {
+  const animalsRaw = (文武 === "文官") ? 武将 : 文官;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
 	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：文武两肖<font color="#ff0000">【${文武}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
