@@ -651,6 +651,20 @@
 	    { data: ["马","羊","猴","鸡","狗","猪"], count: 2 }  // pool của 后肖
 	  ]
 	},
+	文武两肖: {
+	  id: "output文武两肖",
+	  title: "文武两肖",
+	  format: (ky, 文官, 文官, 武将) => {
+	    const animalsRaw = (文武 === "文官") ? 武将 : 文官;
+	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
+	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：文武两肖<font color="#ff0000">【${文武}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	  },
+	  groups: [
+	    { data: ["文官","武将"], count: 1 },            
+	    { data: ["鼠","兔","龙","羊","鸡","猪"], count: 2 }, // pool của 文官
+	    { data: ["牛","虎","马","蛇","猴","狗"], count: 2 }  // pool của 武将
+	  ]
+	},
 	阴阳两肖: {
 	  id: "output阴阳两肖",
 	  title: "阴阳两肖",
