@@ -74,7 +74,26 @@
   <div id="sections"></div>
 
   <script>
-  /* ================== CONFIG ================== */
+
+const ZODIAC_NUMBERS = {
+  "马": [1, 13, 25, 37, 49],
+  "蛇": [2, 14, 26, 38],
+  "龙": [3, 15, 27, 39],
+  "兔": [4, 16, 28, 40],
+  "虎": [5, 17, 29, 41],
+  "牛": [6, 18, 30, 42],
+  "鼠": [7, 19, 31, 43],
+  "猪": [8, 20, 32, 44],
+  "狗": [9, 21, 33, 45],
+  "鸡": [10, 22, 34, 46],
+  "猴": [11, 23, 35, 47],
+  "羊": [12, 24, 36, 48]
+};
+
+/* ============ THỨ TỰ 12 CON GIÁP ============ */
+const ZODIAC_ORDER = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+const TIANXIAO = ["龙","兔","牛","马","猴","猪"];   // 天肖
+const DIXIAO   = ["鼠","虎","蛇","羊","鸡","狗"];   // 地肖
   const datasets = {
     绝杀10码: {
       id: "output绝杀10码",
@@ -405,6 +424,33 @@
         `<p style="font-size: 12pt; line-height: 40px; color: #555555;">{ky}期：<span style="color: rgb(22, 108, 65);">三字平特</span><span style="color: red">【${三字平特}】</span>开<span style="color: red">:？00准</span></span></p>\n<hr>\n`,
       groups: [{ data: ["马后炮","大懒猪","虎而冠","土拨鼠","金鸡奖","老母鸡","水煮蛇","牛魔王","小白兔","马大哈","锦毛鼠","打狗棒","羊皮筏","狗不理","青龙车","喜羊羊","牛鼻子","蛇含石","机灵猴","猕猴桃","斩马刀","大狼狗","老黄牛","五步蛇","米老鼠","癞皮狗","马前卒","牛脾气","金丝猴","小兔子","羊痫风","东山羊","猪牙子","黄焖鸡","大蟒蛇","虎须管","兔崽子","羊肠线","猪八戒","眼镜蛇","看门狗","大黄狗","一匹马","大青龙","坐地虎","韩擒虎","下马威","纸老虎","变色龙","龙斗士","小老鼠","大肥猪","牛鸣风","哈巴狗","铁公鸡","美猴王","牧羊人","水蛇腰","猪头肉","地头蛇","机灵兔","小白鼠","打死虎","千里马","大龙猫","马蛇大","过街鼠","烤竹鼠","孺子牛","狼狗大","笑面虎","捋虎须","下山虎","龙门阵","老虎钳","金猴子","替罪羊","羊痫羊","执耳牛","猴小子","跑龙套","马后车","鼠须管","狗腿子","猪牙","牛魔王","大懒猪","兔崽子"], count: 1 }]
     },
+  天地主肖: {
+    id: "output天地主肖",
+    title: "天地主肖",
+    format: (ky, 组名) => {
+      const KEY = "天地主肖";
+      const pool = (组名 === "天肖") ? TIANXIAO : DIXIAO;
+
+      let animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+      let animalKey = 组名 + ":" + animals.join("");
+
+      let tries = 0;
+      while (usedAnimalsMap[KEY] && usedAnimalsMap[KEY].has(animalKey) && tries < 50) {
+        animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+        animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+        animalKey = 组名 + ":" + animals.join("");
+        tries++;
+      }
+      if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
+
+      const animalStr = animals.join("");
+      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">必开</span><span style="color: #ff0000;">【${组名}】</span><span style="color: rgb(99, 135, 205);">主</span><span style="color: #ff0000;">【${animalStr}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`;
+    },
+    groups: [
+      { data: ["天肖","地肖"], count: 1 }
+    ]
+  },
 	平特肖尾: {
 	  id: "output平特肖尾",
 	  title: "平特肖尾",
@@ -552,6 +598,49 @@
         `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：七尾中特<span style="color:#ff0000">【${七尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: [0,1,2,3,4,5,6,7,8,9], count: 7, sort: true }]
     },
+    五肖五码: {
+  id: "output五肖五码",
+  title: "五肖五码",
+  format: (ky, 生肖Str) => {
+    const KEY = "五肖五码";
+    const POOL = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+
+    // 1. Lấy 5 con vật từ group (đã random sẵn)
+    let animals = String(生肖Str).replace(/[^\u4e00-\u9fa5]/g, "").split("");
+    animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+
+    // 2. Chống trùng xuyên suốt các kỳ trong cùng 1 lần generate
+    let animalKey = animals.join("");
+    let tries = 0;
+    while (usedAnimalsMap[KEY] && usedAnimalsMap[KEY].has(animalKey) && tries < 100) {
+      const shuffled = [...POOL].sort(() => Math.random() - 0.5);
+      animals = shuffled.slice(0, 5);
+      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+      animalKey = animals.join("");
+      tries++;
+    }
+    if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
+
+    // 3. Mỗi con vật chọn ngẫu nhiên 1 số (giữ nguyên cặp con–số)
+    const pairs = animals.map(a => {
+      const pool = ZODIAC_NUMBERS[a];
+      const num = pool[Math.floor(Math.random() * pool.length)];
+      return { animal: a, num: num };
+    });
+
+    // 4. Build chuỗi hiển thị
+    const animalStr = pairs.map(p => p.animal).join("");
+    const numsStr = pairs.map(p => String(p.num).padStart(2, "0")).join(".");
+
+    return `<p style="font-size: 12pt; line-height: 35px; color: #555; font-weight: bold;">${String(ky).padStart(3,'0')}期<span style="color: rgb(99, 135, 205);">【五肖五码】</span>特开:<span style="color: red;">？00准</span><br><span style="color: red;">${animalStr}【${numsStr}】</span></p>\n<hr>\n`;
+  },
+  groups: [
+    {
+      data: ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"],
+      count: 5
+    }
+  ]
+},
 
     无错5段: {
       id: "output无错5段",
@@ -884,13 +973,16 @@ for (const key in datasets) {
     return result;
   }
 const lastResultMap = {};
-	function generateGeneric(key) {
-	  const { id, groups, format } = datasets[key];
-	  const separator = document.getElementById("sep-" + key).value;
-	  const startStr = document.getElementById("startKy").value;
-	  const start = parseInt(startStr);
-	  const total = parseInt(document.getElementById("soKy").value);
-	  const len = startStr.length;
+const usedAnimalsMap = {}; 
+function generateGeneric(key) {
+  const { id, groups, format } = datasets[key];
+  const separator = document.getElementById("sep-" + key).value;
+  const startStr = document.getElementById("startKy").value;
+  const start = parseInt(startStr);
+  const total = parseInt(document.getElementById("soKy").value);
+  const len = startStr.length;
+
+if (key === "五肖5码" || key === "天地主肖") usedAnimalsMap[key] = new Set();
 	
 	  let output = [];
 	  let lastJian = null;
