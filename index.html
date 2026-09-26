@@ -570,6 +570,55 @@ const DIXIAO   = ["鼠","虎","蛇","羊","鸡","狗"];   // 地肖
 	    sort: false
 	  }]
 	},
+  文章36码中特: {
+    id: "output文章36码中特",
+    title: "文章36码中特",
+    format: (ky) => {
+      const KEY = "文章36码中特";
+      const ORDER = ["马","蛇","龙","兔","虎","牛","鼠","猪","狗","鸡","猴","羊"];
+
+      // Hàm tạo 1 bộ 12 con × 3 số
+      function makeRow() {
+        return ORDER.map(animal => {
+          const pool = [...ZODIAC_NUMBERS[animal]];
+          const shuffled = pool.sort(() => Math.random() - 0.5);
+          const picked = shuffled.slice(0, 3).sort((a, b) => a - b);
+          const numsStr = picked.map(n => String(n).padStart(2, "0")).join(".");
+          return { animal, numsStr };
+        });
+      }
+
+      // Tạo bộ đầu tiên
+      let rows = makeRow();
+      let rowKey = rows.map(r => r.animal + ":" + r.numsStr).join("|");
+
+      // Chống trùng: nếu bộ số này đã xuất hiện → tạo lại
+      let tries = 0;
+      while (usedAnimalsMap[KEY] && usedAnimalsMap[KEY].has(rowKey) && tries < 100) {
+        rows = makeRow();
+        rowKey = rows.map(r => r.animal + ":" + r.numsStr).join("|");
+        tries++;
+      }
+      if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(rowKey);
+
+      // Build bảng HTML
+      let html = `<table width="100%" border="1" style="border-collapse:collapse;"><tr><th colspan="6">${String(ky).padStart(3,'0')}期特开:（？00）准100%</th></tr>`;
+
+      for (let r = 0; r < 4; r++) {
+        html += `<tr>`;
+        for (let c = 0; c < 3; c++) {
+          const item = rows[r * 3 + c];
+          html += `<td class="td1">${item.animal}</td><td width="25%">${item.numsStr}</td>`;
+        }
+        html += `</tr>`;
+      }
+
+      html += `\n</table>\n`;
+      return html;
+    },
+    groups: []
+  },
+
     三头中特: {
       id: "output三头中特",
       title: "三头中特",
@@ -982,7 +1031,9 @@ function generateGeneric(key) {
   const total = parseInt(document.getElementById("soKy").value);
   const len = startStr.length;
 
-if (key === "五肖5码" || key === "天地主肖") usedAnimalsMap[key] = new Set();
+if (key === "五肖5码" || key === "天地主肖" || key === "文章36码中特") {
+  usedAnimalsMap[key] = new Set();
+}
 	
 	  let output = [];
 	  let lastJian = null;
@@ -991,7 +1042,10 @@ if (key === "五肖5码" || key === "天地主肖") usedAnimalsMap[key] = new Se
 	    let ky = String(kyNum).padStart(len, "0");
 	
 		let picks;
-		if (key === "精选24码") {
+    if (key === "文章36码中特") {
+      output.push(format(ky));
+    }
+    else if (key === "精选24码") {
 		  // trả về mảng số
 		  picks = groups.flatMap(g => {
 		    let picked = chonNgauNhien(g.data, g.count);
