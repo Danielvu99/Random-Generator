@@ -157,6 +157,40 @@ const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
         { data: ["鼠","猪","牛"], count: 1 }
       ]
     },
+单双十码: {
+  id: "output单双十码",
+  title: "单双十码",
+  format: (ky, 单Str, 双Str) => {
+    // 单Str, 双Str là chuỗi đã join sẵn (mặc định bằng space hoặc dropdown)
+    // Ta tách số, sort tăng dần, rồi nối lại bằng space
+    const 单 = String(单Str).match(/\d+/g) || [];
+    const 双 = String(双Str).match(/\d+/g) || [];
+
+    单.sort((a, b) => Number(a) - Number(b));
+    双.sort((a, b) => Number(a) - Number(b));
+
+    const 单Line = 单.join(" ");
+    const 双Line = 双.join(" ");
+
+    return `<p style="font-size: 12pt; line-height: 32px; color: #555555;">${String(ky).padStart(3,'0')}期:【单双十码】开:<span style="color: #ff0000;">？00准<br>单: ${单Line}<br>双: ${双Line}</span></p>\n<hr>\n`;
+  },
+  groups: [
+    {
+      data: ["01","03","05","07","09","11","13","15","17","19",
+             "21","23","25","27","29","31","33","35","37","39",
+             "41","43","45","47","49"],
+      count: 10,
+      sort: true
+    },
+    {
+      data: ["02","04","06","08","10","12","14","16","18","20",
+             "22","24","26","28","30","32","34","36","38","40",
+             "42","44","46","48"],
+      count: 10,
+      sort: true
+    }
+  ]
+},
     梅兰竹菊杀一肖: {
       id: "output梅兰竹菊杀一肖",
       title: "梅兰竹菊杀一肖",
@@ -478,6 +512,40 @@ const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
     },
     groups: [
       { data: ["黑肖","白肖"], count: 1 }
+    ]
+  },
+
+  九肖九码甲: {
+    id: "output九肖九码甲",
+    title: "九肖九码甲",
+    format: (ky, 生肖Str) => {
+      const POOL = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+
+      // 1. Tách 5 con vật từ group
+      let animals = String(生肖Str).replace(/[^\u4e00-\u9fa5]/g, "").split("");
+
+      // 2. Sắp theo thứ tự 12 con giáp
+      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+
+      // 3. Mỗi con chọn ngẫu nhiên 1 số — giữ cặp [con, số]
+      const pairs = animals.map(a => {
+        const pool = ZODIAC_NUMBERS[a];
+        const num = pool[Math.floor(Math.random() * pool.length)];
+        return { animal: a, num: num };
+      });
+
+      // 4. Build chuỗi dạng "虎05 猴35 鼠43 龙39 鸡34"
+      const pairStr = pairs
+        .map(p => p.animal + String(p.num).padStart(2, "0"))
+        .join(" ");
+
+      return `<p style="color: #555555; font-size: 12pt; line-height: 32px;">${String(ky).padStart(3,'0')}期：<span style="color: #6387cd;">五肖五码</span> 特开:<span style="color: #ff0000;">？00准<br> 〖${pairStr}〗 </span></p>\n<hr>\n`;
+    },
+    groups: [
+      {
+        data: ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"],
+        count: 9
+      }
     ]
   },
 	平特肖尾: {
@@ -1060,7 +1128,7 @@ function generateGeneric(key) {
   const total = parseInt(document.getElementById("soKy").value);
   const len = startStr.length;
 
-if (key === "五肖5码" || key === "天地主肖" || key === "黑白主肖" || key === "文章36码中特") {
+if (key === "五肖五码" || key === "天地主肖"|| key === "九肖九码甲"  || key === "黑白主肖" || key === "文章36码中特") {
   usedAnimalsMap[key] = new Set();
 }
 	
