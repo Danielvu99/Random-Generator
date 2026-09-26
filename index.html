@@ -94,6 +94,8 @@ const ZODIAC_NUMBERS = {
 const ZODIAC_ORDER = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
 const TIANXIAO = ["龙","兔","牛","马","猴","猪"];   // 天肖
 const DIXIAO   = ["鼠","虎","蛇","羊","鸡","狗"];   // 地肖
+const HEIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 黑肖
+const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
   const datasets = {
     绝杀10码: {
       id: "output绝杀10码",
@@ -449,6 +451,33 @@ const DIXIAO   = ["鼠","虎","蛇","羊","鸡","狗"];   // 地肖
     },
     groups: [
       { data: ["天肖","地肖"], count: 1 }
+    ]
+  },
+黑白主肖: {
+    id: "output黑白主肖",
+    title: "黑白主肖",
+    format: (ky, 组名) => {
+      const KEY = "黑白主肖";
+      const pool = (组名 === "黑肖") ? HEIXIAO : BAIXIAO;
+
+      let animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+      let animalKey = 组名 + ":" + animals.join("");
+
+      let tries = 0;
+      while (usedAnimalsMap[KEY] && usedAnimalsMap[KEY].has(animalKey) && tries < 50) {
+        animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+        animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+        animalKey = 组名 + ":" + animals.join("");
+        tries++;
+      }
+      if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
+
+      const animalStr = animals.join("");
+      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">黑白</span>〖<span style="color: #ff0000;">${组名}</span>〗主<span style="color: #ff0000;">${animalStr}</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`;
+    },
+    groups: [
+      { data: ["黑肖","白肖"], count: 1 }
     ]
   },
 	平特肖尾: {
@@ -1031,7 +1060,7 @@ function generateGeneric(key) {
   const total = parseInt(document.getElementById("soKy").value);
   const len = startStr.length;
 
-if (key === "五肖5码" || key === "天地主肖" || key === "文章36码中特") {
+if (key === "五肖5码" || key === "天地主肖" || key === "黑白主肖" || key === "文章36码中特") {
   usedAnimalsMap[key] = new Set();
 }
 	
