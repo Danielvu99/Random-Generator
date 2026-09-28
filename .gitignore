@@ -1,0 +1,9 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+*.code-workspace
+.autogit/
+*.log
+*.bak
+*.tmp
