@@ -131,8 +131,6 @@ const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
         count: 1
     }]
 },
-
-
     方向杀一肖: {
       id: "output方向杀一肖",
       title: "方向杀一肖",
@@ -667,11 +665,11 @@ const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
 	    sort: false
 	  }]
 	},
-  文章36码中特: {
-    id: "output文章36码中特",
-    title: "文章36码中特",
+  精选36码: {
+    id: "output精选36码",
+    title: "精选36码",
     format: (ky) => {
-      const KEY = "文章36码中特";
+      const KEY = "精选36码";
       const ORDER = ["马","蛇","龙","兔","虎","牛","鼠","猪","狗","鸡","猴","羊"];
 
       // Hàm tạo 1 bộ 12 con × 3 số
@@ -1128,7 +1126,7 @@ function generateGeneric(key) {
   const total = parseInt(document.getElementById("soKy").value);
   const len = startStr.length;
 
-if (key === "五肖五码" || key === "天地主肖"|| key === "九肖九码甲"  || key === "黑白主肖" || key === "文章36码中特") {
+if (key === "五肖五码" || key === "天地主肖"|| key === "九肖九码甲"  || key === "黑白主肖" || key === "精选36码") {
   usedAnimalsMap[key] = new Set();
 }
 	
@@ -1139,7 +1137,7 @@ if (key === "五肖五码" || key === "天地主肖"|| key === "九肖九码甲"
 	    let ky = String(kyNum).padStart(len, "0");
 	
 		let picks;
-    if (key === "文章36码中特") {
+    if (key === "精选36码") {
       output.push(format(ky));
     }
     else if (key === "精选24码") {
