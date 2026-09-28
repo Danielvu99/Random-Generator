@@ -1320,3 +1320,85 @@ menuTabsEl.addEventListener("wheel", (e) => {
   </script>
 </body>
 </html>
+werCase().replace(/\s+/g, "");
+}
+
+function searchTool() {
+
+  const keyword =
+    normalize(
+      document.getElementById("searchBox").value
+    );
+
+  const wrapper =
+    document.getElementById("menuTabsWrapper");
+
+  const buttons =
+    document.querySelectorAll("#menuTabs button");
+
+  // nếu có nhập thì tự mở menu
+  if (keyword !== "") {
+
+    wrapper.style.display = "block";
+
+  } else {
+
+    wrapper.style.display = "none";
+  }
+
+  let found = false;
+
+  buttons.forEach(btn => {
+
+    const text =
+      normalize(btn.innerText);
+
+    if (text.includes(keyword)) {
+
+      btn.style.display = "inline-block";
+
+      found = true;
+
+    } else {
+
+      btn.style.display = "none";
+    }
+  });
+
+  // nếu không có kết quả
+  if (!found && keyword !== "") {
+
+    wrapper.style.display = "none";
+  }
+}
+
+function handleEnter(e) {
+
+  if (e.key === "Enter") {
+
+    const key =
+      document.getElementById("selectMenu").value;
+
+    if (datasets[key]) {
+
+      generateGeneric(key);
+    }
+  }
+}
+showSection();
+
+const menuTabsEl = document.getElementById("menuTabs");
+
+menuTabsEl.addEventListener("wheel", (e) => {
+
+  e.preventDefault();
+
+  menuTabsEl.scrollBy({
+    left: e.deltaY * 2,
+    behavior: "smooth"
+  });
+
+});
+  </script>
+</body>
+</html>
