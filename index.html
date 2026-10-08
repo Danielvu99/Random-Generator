@@ -96,6 +96,10 @@ const TIANXIAO = ["龙","兔","牛","马","猴","猪"];   // 天肖
 const DIXIAO   = ["鼠","虎","蛇","羊","鸡","狗"];   // 地肖
 const HEIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 黑肖
 const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
+const DANXIAO = ["龙","虎","鼠","狗","猴","马"];   // 单肖
+const SHUANGXIAO = ["兔","牛","猪","鸡","羊","蛇"];   // 双肖
+
+
   const datasets = {
     绝杀10码: {
       id: "output绝杀10码",
@@ -512,28 +516,21 @@ const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
       { data: ["黑肖","白肖"], count: 1 }
     ]
   },
-单双主肖: {
+  单双主肖: {
     id: "output单双主肖",
     title: "单双主肖",
     format: (ky, 组名) => {
-      const KEY = "单双主肖";
       const pool = (组名 === "单肖") ? DANXIAO : SHUANGXIAO;
 
+      // Random 3 con khác nhau từ pool
       let animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
-      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
-      let animalKey = 组名 + ":" + animals.join("");
 
-      let tries = 0;
-      while (usedAnimalsMap[KEY] && usedAnimalsMap[KEY].has(animalKey) && tries < 50) {
-        animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
-        animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
-        animalKey = 组名 + ":" + animals.join("");
-        tries++;
-      }
-      if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
+      // Sắp theo thứ tự 12 con giáp
+      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
 
       const animalStr = animals.join("");
-      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">黑白</span>〖<span style="color: #ff0000;">${组名}</span>〗主<span style="color: #ff0000;">${animalStr}</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`;
+
+      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #fa6807;">必开</span><span style="color: #ff0000;">【${组名} 主 ${animalStr}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`;
     },
     groups: [
       { data: ["单肖","双肖"], count: 1 }
