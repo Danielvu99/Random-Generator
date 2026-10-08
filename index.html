@@ -512,6 +512,33 @@ const BAIXIAO = ["兔","龙","蛇","马","羊","猴"];   // 白肖
       { data: ["黑肖","白肖"], count: 1 }
     ]
   },
+单双主肖: {
+    id: "output单双主肖",
+    title: "单双主肖",
+    format: (ky, 组名) => {
+      const KEY = "单双主肖";
+      const pool = (组名 === "单肖") ? DANXIAO : SHUANGXIAO;
+
+      let animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+      animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+      let animalKey = 组名 + ":" + animals.join("");
+
+      let tries = 0;
+      while (usedAnimalsMap[KEY] && usedAnimalsMap[KEY].has(animalKey) && tries < 50) {
+        animals = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+        animals.sort((a, b) => ZODIAC_ORDER.indexOf(a) - ZODIAC_ORDER.indexOf(b));
+        animalKey = 组名 + ":" + animals.join("");
+        tries++;
+      }
+      if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
+
+      const animalStr = animals.join("");
+      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">黑白</span>〖<span style="color: #ff0000;">${组名}</span>〗主<span style="color: #ff0000;">${animalStr}</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`;
+    },
+    groups: [
+      { data: ["单肖","双肖"], count: 1 }
+    ]
+  },
 
   九肖九码甲: {
     id: "output九肖九码甲",
@@ -1126,7 +1153,7 @@ function generateGeneric(key) {
   const total = parseInt(document.getElementById("soKy").value);
   const len = startStr.length;
 
-if (key === "五肖五码" || key === "天地主肖"|| key === "九肖九码甲"  || key === "黑白主肖" || key === "精选36码") {
+if (key === "五肖五码" || key === "天地主肖"|| key === "九肖九码甲"  || key === "黑白主肖" || key === "单双主肖" || key === "精选36码") {
   usedAnimalsMap[key] = new Set();
 }
 	
