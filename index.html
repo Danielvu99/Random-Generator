@@ -269,6 +269,16 @@ const SHUANGXIAO = ["兔","牛","猪","鸡","羊","蛇"];   // 双肖
         { data: ["鸡","蛇","羊","狗","鼠","虎"], count: 4 }
       ]
     },
+    黑白4肖: {
+      id: "output黑白4肖",
+      title: "黑白4肖",
+      format: (ky, 黑肖, 白肖) =>
+        `<p>${String(ky).padStart(3,'0')}期:黑【<span style="color: red;">${黑肖}</span>】白【<span style="color: red;">${白肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
+      groups: [
+	    { data: ["兔","龙","蛇","马","羊","猴"], count: 2 }, // pool của 黑肖
+	    { data: ["鼠","牛","虎","鸡","狗","猪"], count: 2 }  // pool của 白肖
+      ]
+    },
     吉美凶丑4肖: {
       id: "output吉美凶丑4肖",
       title: "吉美凶丑4肖",
