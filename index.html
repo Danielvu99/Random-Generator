@@ -259,6 +259,16 @@ const SHUANGXIAO = ["兔","牛","猪","鸡","羊","蛇"];   // 双肖
         { data: ["猴","蛇","龙","兔","虎","鼠"], count: 4 }
       ]
     },
+    天地4肖: {
+      id: "output天地4肖",
+      title: "天地4肖",
+      format: (ky, 天肖, 地肖) =>
+        `<p>${String(ky).padStart(3,'0')}期:天【<span style="color: red;">${天肖}</span>】地【<span style="color: red;">${地肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
+      groups: [
+        { data: ["兔","马","猴","牛","猪","龙"], count: 4 },
+        { data: ["鸡","蛇","羊","狗","鼠","虎"], count: 4 }
+      ]
+    },
     吉美凶丑4肖: {
       id: "output吉美凶丑4肖",
       title: "吉美凶丑4肖",
