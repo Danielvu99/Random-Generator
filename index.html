@@ -350,6 +350,66 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
         `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：肉菜草肖<span style="color: #ff0000;">【${肉菜草肖.split("肖").filter(Boolean).map(x => x + "肖").join("")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["肉肖","菜肖","草肖"], count: 2 }]
     },
+六肖加一肖: {
+  id: "output六肖加一肖",
+  title: "六肖加一肖",
+  format: (ky, 生肖6Str, 生肖1Str) => {
+    // 1. Lấy 6 con đầu
+    let animals6 = String(生肖6Str).replace(/[^\u4e00-\u9fa5]/g, "").split("");
+    
+    // 2. Lấy 1 con cuối
+    let animal1 = String(生肖1Str).replace(/[^\u4e00-\u9fa5]/g, "").split("")[0];
+
+    // 3. Hàm lấy 1 số ngẫu nhiên của con vật (không trùng)
+    const usedNums = new Set();
+    const getNum = (animal) => {
+      const pool = ZODIAC_NUMBERS[animal];
+      let num;
+      let tries = 0;
+      do {
+        num = pool[Math.floor(Math.random() * pool.length)];
+        tries++;
+      } while (usedNums.has(num) && tries < 50);
+      usedNums.add(num);
+      return num;
+    };
+
+    // 4. Lấy số cho nhóm 6 con (6 số)
+    let numsList = animals6.map(a => getNum(a));
+    
+    // 5. Lấy thêm 6 số nữa từ chính nhóm 6 con (để tổng cộng đủ 13 số)
+    // (Nếu con vật nào hết số thì vòng lặp vẫn tự lấy lại số khác)
+    for (let i = 0; i < 6; i++) {
+      const randomAnimal = animals6[Math.floor(Math.random() * animals6.length)];
+      numsList.push(getNum(randomAnimal));
+    }
+
+    // 6. Lấy 1 số cho con vật cuối cùng (tổng 13 số: 6 + 6 + 1)
+    numsList.push(getNum(animal1));
+
+    // 7. Format số thành 2 chữ số
+    const formattedNums = numsList.map(n => String(n).padStart(2, '0'));
+
+    // 8. Chia thành 2 dòng: 7 số trên, 6 số dưới
+    const line1 = formattedNums.slice(0, 7).join(".");
+    const line2 = formattedNums.slice(7, 13).join(".");
+
+    // 9. Render HTML
+    const animal6Str = animals6.join("");
+    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #ff0000;">【${animal6Str}】+【${animal1}】</span>开:<span style="color: #ff0000;">？00准</span><br><span style="color: #ff0000; font-size: 14pt;">【${line1}】<br>【${line2}】</span></p>\n<hr>\n`;
+  },
+  groups: [
+    { 
+      data: ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"], 
+      count: 6 
+    },
+    { 
+      data: ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"], 
+      count: 1 
+    }
+  ]
+},
+	  
     独战三国: {
       id: "output独战三国",
       title: "独战三国",
