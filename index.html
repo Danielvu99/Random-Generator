@@ -124,7 +124,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
             "梁鸿志": "④"
         };
 
-        return `<p style="font-size:12pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期:>铲除${map[data]}号汉奸【<span style="color:#ff0000;background-color:#FFE500;">${data}</span>】开:<span style="color:#ff0000;">？00准</span></p>\n<hr>\n`;
+        return `<p style="font-size: 13pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期:>铲除${map[data]}号汉奸【<span style="color:#ff0000;background-color:#FFE500;">${data}</span>】开:<span style="color:#ff0000;">？00准</span></p>\n<hr>\n`;
     },
     groups: [{
         data: ["汪精卫","陈公博","周佛海","梁鸿志"],
@@ -137,7 +137,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output方向杀一肖",
       title: "方向杀一肖",
       format: (ky, 东, 西, 南, 北) =>
-        `<p style="font-size: 12pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【方向杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【东： ${东}】【西： ${西}】<br>【南： ${南}】【北： ${北}】</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【方向杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【东： ${东}】【西： ${西}】<br>【南： ${南}】【北： ${北}】</span></p>\n<hr>\n`,
       groups: [
         { data: ["兔","虎","龙"], count: 1 },
         { data: ["鸡","猴","狗"], count: 1 },
@@ -149,7 +149,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output春夏秋冬杀一肖",
       title: "春夏秋冬杀一肖",
       format: (ky, 春, 夏, 秋, 冬) =>
-        `<p style="font-size: 12pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【春夏秋冬杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【春： ${春}】【夏： ${夏}】<br>【秋： ${秋}】【冬： ${冬}】</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【春夏秋冬杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【春： ${春}】【夏： ${夏}】<br>【秋： ${秋}】【冬： ${冬}】</span></p>\n<hr>\n`,
       groups: [
         { data: ["兔","虎","龙"], count: 1 },
         { data: ["马","蛇","羊"], count: 1 },
@@ -172,7 +172,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
     const 单Line = 单.join(" ");
     const 双Line = 双.join(" ");
 
-    return `<p style="font-size: 12pt; line-height: 32px; color: #555555;">${String(ky).padStart(3,'0')}期:【单双十码】开:<span style="color: #ff0000;">？00准<br>单: ${单Line}<br>双: ${双Line}</span></p>\n<hr>\n`;
+    return `<p style="font-size: 13pt; line-height: 32px; color: #555555;">${String(ky).padStart(3,'0')}期:【单双十码】开:<span style="color: #ff0000;">？00准<br>单: ${单Line}<br>双: ${双Line}</span></p>\n<hr>\n`;
   },
   groups: [
     {
@@ -195,7 +195,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output梅兰竹菊杀一肖",
       title: "梅兰竹菊杀一肖",
       format: (ky, 梅, 兰, 竹, 菊) =>
-        `<p style="font-size: 12pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【梅兰竹菊杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【梅： ${梅}】【兰： ${兰}】<br>【竹： ${竹}】【菊： ${菊}】</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【梅兰竹菊杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【梅： ${梅}】【兰： ${兰}】<br>【竹： ${竹}】【菊： ${菊}】</span></p>\n<hr>\n`,
       groups: [
         { data: ["鸡","兔","蛇"], count: 1 },
         { data: ["鼠","牛","狗"], count: 1 },
@@ -207,7 +207,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output琴棋书画杀一肖",
       title: "琴棋书画杀一肖",
       format: (ky, 琴, 棋, 书, 画) =>
-        `<p style="font-size: 12pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【琴棋书画杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【琴： ${琴}】【棋： ${棋}】<br>【书： ${书}】【画： ${画}】</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【琴棋书画杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【琴： ${琴}】【棋： ${棋}】<br>【书： ${书}】【画： ${画}】</span></p>\n<hr>\n`,
       groups: [
         { data: ["鸡","兔","蛇"], count: 1 },
         { data: ["鼠","牛","狗"], count: 1 },
@@ -219,7 +219,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output笔墨纸砚杀一肖",
       title: "笔墨纸砚杀一肖",
       format: (ky, 笔, 墨, 纸, 砚) =>
-        `<p style="font-size: 12pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【笔墨纸砚杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【笔： ${笔}】【墨： ${墨}】<br>【纸： ${纸}】【砚： ${砚}】</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 25px; color: #555555;">${String(ky).padStart(3,'0')}期：【笔墨纸砚杀一肖】开:<span style="color: red">？00准</span><br><span style="color: red">【笔： ${笔}】【墨： ${墨}】<br>【纸： ${纸}】【砚： ${砚}】</span></p>\n<hr>\n`,
       groups: [
         { data: ["鸡","兔","蛇"], count: 1 },
         { data: ["鼠","牛","狗"], count: 1 },
@@ -281,7 +281,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output吉美凶丑4肖",
       title: "吉美凶丑4肖",
       format: (ky, 吉美, 凶丑) =>
-        `<p style="font-size:12pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 吉【<span style="color:#f00;">${吉美}</span>】 凶【<span style="color:#f00;">${凶丑}</span>】</p>\n<hr>\n`,
+        `<p style="font-size: 13pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 吉【<span style="color:#f00;">${吉美}</span>】 凶【<span style="color:#f00;">${凶丑}</span>】</p>\n<hr>\n`,
       groups: [
         { data: ["兔","龙","蛇","马","羊","鸡"], count: 4 },
         { data: ["鼠","牛","虎","猴","狗","猪"], count: 4 }
@@ -291,7 +291,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output左右4肖",
       title: "左右4肖",
       format: (ky, 左肖, 右肖) =>
-        `<p style="font-size:12pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 左【<span style="color:#f00;">${左肖}</span>】 右【<span style="color:#f00;">${右肖}</span>】</p>\n<hr>\n`,
+        `<p style="font-size: 13pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 左【<span style="color:#f00;">${左肖}</span>】 右【<span style="color:#f00;">${右肖}</span>】</p>\n<hr>\n`,
       groups: [
         { data: ["鼠","牛","龙","蛇","猴","鸡"], count: 4 },
         { data: ["虎","兔","马","羊","狗","猪"], count: 4 }
@@ -301,7 +301,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output阴阳4肖",
       title: "阴阳4肖",
       format: (ky, 阴肖, 阳肖) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:阴【<span style="color: red;">${阴肖}</span>】阳【<span style="color: red;">${阳肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:阴【<span style="color: red;">${阴肖}</span>】阳【<span style="color: red;">${阳肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
       groups: [
         { data: ["鼠","龙","蛇","马","狗","猪"], count: 4 },
         { data: ["牛","虎","兔","羊","猴","鸡"], count: 4 }
@@ -311,7 +311,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output男女4肖",
       title: "男女4肖",
       format: (ky, 男肖, 女肖) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:男【<span style="color: red;">${男肖}</span>】女【<span style="color: red;">${女肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:男【<span style="color: red;">${男肖}</span>】女【<span style="color: red;">${女肖}</span>】<span style="color: red;">&radic;</span></p>\n<hr>\n`,
       groups: [
         { data: ["鼠","牛","虎","龙","马","猴","狗"], count: 4 },
         { data: ["兔","蛇","羊","鸡","猪"], count: 4 }
@@ -322,7 +322,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output绝杀三肖",
       title: "绝杀三肖",
       format: (ky, 绝杀三肖) =>
-        `<p style="color: #ff0000; font-size: 12pt; line-height: 40px;">${String(ky).padStart(3,'0')}期：绝杀三肖<span style="color: #ff0000;">【${绝杀三肖}】</span>开</span>:？00准</p>\n<hr>\n`,
+        `<p style="color: #ff0000; font-size: 13pt; line-height: 40px;">${String(ky).padStart(3,'0')}期：绝杀三肖<span style="color: #ff0000;">【${绝杀三肖}】</span>开</span>:？00准</p>\n<hr>\n`,
       groups: [{ data: ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"], count: 3 }]
     },
 
@@ -334,7 +334,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	    // nếu chọn 单笔 thì lấy 2 con từ pool 双笔 và ngược lại
 	    const animalsRaw = (单双笔 === "单笔") ? 双笔 : 单笔;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双笔+2肖<font color="#ff0000">【${单双笔}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双笔+2肖<font color="#ff0000">【${单双笔}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["单笔","双笔"], count: 1 },            // chọn nhãn
@@ -347,7 +347,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output肉菜草肖",
       title: "肉菜草肖",
       format: (ky, 肉菜草肖) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：肉菜草肖<span style="color: #ff0000;">【${肉菜草肖.split("肖").filter(Boolean).map(x => x + "肖").join("")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：肉菜草肖<span style="color: #ff0000;">【${肉菜草肖.split("肖").filter(Boolean).map(x => x + "肖").join("")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["肉肖","菜肖","草肖"], count: 2 }]
     },
 六肖加一肖: {
@@ -421,76 +421,76 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output独战三国",
       title: "独战三国",
       format: (ky, 独战三国) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独战三国<span style="color: #ff0000;">【${独战三国.split().filter(Boolean).map(x => x + "").join("")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独战三国<span style="color: #ff0000;">【${独战三国.split().filter(Boolean).map(x => x + "").join("")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["吴国","蜀国","魏国"], count: 2 }]
     },
     三类肖中: {
       id: "output三类肖中",
       title: "三类肖中",
       format: (ky, 三类肖中) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：三类肖中<span style="color: #ff0000;">【${三类肖中.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：三类肖中<span style="color: #ff0000;">【${三类肖中.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["恶人","美人","家人"], count: 2 }]
     },
     杀半单双: {
       id: "output杀半单双",
       title: "杀半单双",
       format: (ky, 杀半单双) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：杀半单双<span style="color: #ff0000;">【${杀半单双.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：杀半单双<span style="color: #ff0000;">【${杀半单双.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["大双","小单","大单","小双"], count: 1 }]
     },    
     红蓝绿波: {
       id: "output红蓝绿波",
       title: "红蓝绿波",
       format: (ky, 红蓝绿波) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：红蓝绿波<span style="color: #ff0000;">【${红蓝绿波.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：红蓝绿波<span style="color: #ff0000;">【${红蓝绿波.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["红波","蓝波","绿波"], count: 2 }]
     },
     绝杀半波: {
       id: "output绝杀半波",
       title: "绝杀半波",
       format: (ky, 绝杀半波) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：绝杀半波<span style="color: #ff0000;">【${绝杀半波.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：绝杀半波<span style="color: #ff0000;">【${绝杀半波.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["红双","蓝单","绿单","红单","绿双","蓝双"], count: 1 }]
     },    红蓝绿波: {
       id: "output红蓝绿波",
       title: "红蓝绿波",
       format: (ky, 红蓝绿波) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：红蓝绿波<span style="color: #ff0000;">【${红蓝绿波.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：红蓝绿波<span style="color: #ff0000;">【${红蓝绿波.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["红波","蓝波","绿波"], count: 2 }]
     },
     红蓝绿肖: {
       id: "output红蓝绿肖",
       title: "红蓝绿肖",
       format: (ky, 红蓝绿肖) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：红蓝绿肖<span style="color: #ff0000;">【${红蓝绿肖.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：红蓝绿肖<span style="color: #ff0000;">【${红蓝绿肖.split().filter(Boolean).map(x => x + "")}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["红肖","蓝肖","绿肖"], count: 2 }]
     },
     三行中特: {
       id: "output三行中特",
       title: "三行中特",
       format: (ky, 三行中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：三行中特<span style="color:#ff0000">【${三行中特}】开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：三行中特<span style="color:#ff0000">【${三行中特}】开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["金","木","水","火","土"], count: 3 }]
     },
     四行中特: {
       id: "output四行中特",
       title: "四行中特",
       format: (ky, 四行中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：四行中特<span style="color:#ff0000">【${四行中特}】开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：四行中特<span style="color:#ff0000">【${四行中特}】开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["金","木","水","火","土"], count: 4 }]
     },
     绝杀一行: {
       id: "output绝杀一行",
       title: "绝杀一行",
       format: (ky, 绝杀一行) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：绝杀一行<span style="color:#ff0000">【${绝杀一行}】开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：绝杀一行<span style="color:#ff0000">【${绝杀一行}】开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["金金金","木木木","水水水","火火火","土土土"], count: 1 }]
     },
     绝杀三合: {
       id: "output绝杀三合",
       title: "绝杀三合",
       format: (ky, 绝杀三合) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：绝杀三合<span style="color:#ff0000">【${绝杀三合}合】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：绝杀三合<span style="color:#ff0000">【${绝杀三合}合】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{
         data: ["01","02","03","04","05","06","07","08","09","10","11","12","13"],
         count: 3,
@@ -537,14 +537,14 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output成语平特",
       title: "成语平特",
       format: (ky, 成语平特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：<span style="color: rgb(22, 108, 65);">成语平特</span><span style="color: red">【${成语平特}】</span>开<span style="color: red">:？00准</span></span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：<span style="color: rgb(22, 108, 65);">成语平特</span><span style="color: red">【${成语平特}】</span>开<span style="color: red">:？00准</span></span></p>\n<hr>\n`,
       groups: [{ data: ["城狐社鼠","虫臂鼠肝","掉头鼠窜","奉头鼠窜","孤雏腐鼠","猫鼠同乳","捧头鼠窜","雀目鼠步","牛蹄之鱼","牛羊勿践","牛衣岁月","牛农对泣","茧丝牛毛","鸡口牛后","对牛弹琴","带牛佩犊","藏龙卧虎","饿虎扑食","放虎归山","放虎自卫","狼飡虎咽","狼吞虎噬","麟角虎翅","龙蹲虎踞","见兔顾犬","狐死兔泣","惊猿脱兔","兔起鹘落","兔死狐悲","获兔烹狗","目兔顾犬","兔角龟毛","黄龙痛饮","画龙点晴","虎据龙蟠","鹤骨龙筋","虎斗龙争","龟龙鳞凤","风虎云龙","车水马龙","春蚓秋蛇","斗折蛇行","灵蛇之珠","龙蛇飞动","牛鬼蛇神","蛇欲吞象","握蛇骑虎","养虺成蛇","士饱马腾","司马青衫","童牛角马","单枪匹马","车马盈门","伯乐相马","弊车羸马","鞍马劳困","问羊知马","羊入虎群","以羊易牛","鸟道羊肠","昌歜羊枣","狼羊同饲","卖狗悬羊","瘦羊博士","弄鬼掉猴","猴年马月","杀鸡哧猴","轩鹤冠猴","尖嘴猴腮","沐猴而冠","猿猴取月","沐猴衣冠","范张鸡黍","鹤发鸡皮","鸡虫得失","鸡骨支床","小肚鸡肠","土鸡瓦犬","只鸡斗酒","卓立鸡群","斗鸡走狗","狗盗鸡鸣","狗肺狼心","狗拿耗子","狗头鼠脑","狗逮老鼠","鸡飞狗跳","驴鸣狗吠","牧猪奴戏","猪卑狗险","泥猪疥狗","泥猪癞狗","泥猪瓦狗","指猪骂狗","猪朋狗友","一龙一猪"], count: 1 }]
     },
     三字平特: {
       id: "output三字平特",
       title: "三字平特",
       format: (ky, 三字平特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">{ky}期：<span style="color: rgb(22, 108, 65);">三字平特</span><span style="color: red">【${三字平特}】</span>开<span style="color: red">:？00准</span></span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">{ky}期：<span style="color: rgb(22, 108, 65);">三字平特</span><span style="color: red">【${三字平特}】</span>开<span style="color: red">:？00准</span></span></p>\n<hr>\n`,
       groups: [{ data: ["马后炮","大懒猪","虎而冠","土拨鼠","金鸡奖","老母鸡","水煮蛇","牛魔王","小白兔","马大哈","锦毛鼠","打狗棒","羊皮筏","狗不理","青龙车","喜羊羊","牛鼻子","蛇含石","机灵猴","猕猴桃","斩马刀","大狼狗","老黄牛","五步蛇","米老鼠","癞皮狗","马前卒","牛脾气","金丝猴","小兔子","羊痫风","东山羊","猪牙子","黄焖鸡","大蟒蛇","虎须管","兔崽子","羊肠线","猪八戒","眼镜蛇","看门狗","大黄狗","一匹马","大青龙","坐地虎","韩擒虎","下马威","纸老虎","变色龙","龙斗士","小老鼠","大肥猪","牛鸣风","哈巴狗","铁公鸡","美猴王","牧羊人","水蛇腰","猪头肉","地头蛇","机灵兔","小白鼠","打死虎","千里马","大龙猫","马蛇大","过街鼠","烤竹鼠","孺子牛","狼狗大","笑面虎","捋虎须","下山虎","龙门阵","老虎钳","金猴子","替罪羊","羊痫羊","执耳牛","猴小子","跑龙套","马后车","鼠须管","狗腿子","猪牙","牛魔王","大懒猪","兔崽子"], count: 1 }]
     },
   天地主肖: {
@@ -568,7 +568,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
 
       const animalStr = animals.join("");
-      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">必开</span><span style="color: #ff0000;">【${组名}】</span><span style="color: rgb(99, 135, 205);">主</span><span style="color: #ff0000;">【${animalStr}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`;
+      return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">必开</span><span style="color: #ff0000;">【${组名}】</span><span style="color: rgb(99, 135, 205);">主</span><span style="color: #ff0000;">【${animalStr}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`;
     },
     groups: [
       { data: ["天肖","地肖"], count: 1 }
@@ -595,7 +595,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       if (usedAnimalsMap[KEY]) usedAnimalsMap[KEY].add(animalKey);
 
       const animalStr = animals.join("");
-      return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">黑白</span>〖<span style="color: #ff0000;">${组名}</span>〗主<span style="color: #ff0000;">${animalStr}</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`;
+      return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color: #6387cd;">黑白</span>〖<span style="color: #ff0000;">${组名}</span>〗主<span style="color: #ff0000;">${animalStr}</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`;
     },
     groups: [
       { data: ["黑肖","白肖"], count: 1 }
@@ -626,7 +626,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
         .map(p => p.animal + String(p.num).padStart(2, "0"))
         .join(" ");
 
-      return `<p style="color: #555555; font-size: 12pt; line-height: 32px;">${String(ky).padStart(3,'0')}期：<span style="color: #6387cd;">五肖五码</span> 特开:<span style="color: #ff0000;">？00准<br> 〖${pairStr}〗 </span></p>\n<hr>\n`;
+      return `<p style="color: #555555; font-size: 13pt; line-height: 32px;">${String(ky).padStart(3,'0')}期：<span style="color: #6387cd;">五肖五码</span> 特开:<span style="color: #ff0000;">？00准<br> 〖${pairStr}〗 </span></p>\n<hr>\n`;
     },
     groups: [
       {
@@ -639,7 +639,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  id: "output平特肖尾",
 	  title: "平特肖尾",
 	  format: (ky, 生肖, 尾数) => {
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：平特肖尾<span style="color:#ff0000;">【${生肖}+${尾数}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：平特肖尾<span style="color:#ff0000;">【${生肖}+${尾数}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["鼠肖","牛肖","虎肖","兔肖","龙肖","蛇肖","马肖","羊肖","猴肖","鸡肖","狗肖","猪肖"], count: 1 },  // chọn con vật
@@ -650,7 +650,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  id: "output尾大尾小两肖",
 	  title: "尾大尾小两肖",
 	  format: (ky, 尾大小, 生肖) => {
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color:#166C41;">尾大小+2肖</span><span style="color:#ff0000;">【${尾大小}+${生肖}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:<span style="color:#166C41;">尾大小+2肖</span><span style="color:#ff0000;">【${尾大小}+${生肖}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["尾大","尾小"], count: 1 },  // chọn to/nhỏ
@@ -664,7 +664,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       // Tách các chữ số, sắp xếp tăng dần, nối bằng dấu chấm
       const 单 = String(单Str).replace(/\D/g, "").split("").sort((a,b)=>a-b).join(".");
       const 双 = String(双Str).replace(/\D/g, "").split("").sort((a,b)=>a-b).join(".");
-      return `<p style="font-size: 12pt; line-height: 30px; color: #555555; font-weight: bold;">${String(ky).padStart(3,'0')}期：<font color="#6387CD">【单双三尾】</font>开:<font color="#ff0000">？00准</font><br><font color="#ff0000">【单:${单}】【双:${双}】</font></p>\n<hr>\n`;
+      return `<p style="font-size: 13pt; line-height: 30px; color: #555555; font-weight: bold;">${String(ky).padStart(3,'0')}期：<font color="#6387CD">【单双三尾】</font>开:<font color="#ff0000">？00准</font><br><font color="#ff0000">【单:${单}】【双:${双}】</font></p>\n<hr>\n`;
     },
     groups: [
       { data: ["1","3","5","7","9"], count: 3 },
@@ -676,56 +676,56 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output春夏秋冬",
       title: "春夏秋冬",
       format: (ky, 春夏秋冬) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：春夏秋冬<font color="#ff0000">【${春夏秋冬}】</font>开<font color="#ff0000">:？00准</font></font></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：春夏秋冬<font color="#ff0000">【${春夏秋冬}】</font>开<font color="#ff0000">:？00准</font></font></p>\n<hr>\n`,
       groups: [{ data: ["春","夏","秋","冬"], count: 3 }]
     },
     东西南北: {
       id: "output东西南北",
       title: "东西南北",
       format: (ky, 东西南北) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555">${String(ky).padStart(3,'0')}期：东西南北<span style="color: #ff0000;">【${东西南北}】</span>开<span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555">${String(ky).padStart(3,'0')}期：东西南北<span style="color: #ff0000;">【${东西南北}】</span>开<span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["东","西","南","北"], count: 3 }]
     },
     琴棋书画: {
       id: "output琴棋书画",
       title: "琴棋书画",
       format: (ky, 琴棋书画) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：琴棋书画<font color="#ff0000">【${琴棋书画}】</font>开<font color="#ff0000">:？00准</font></font></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：琴棋书画<font color="#ff0000">【${琴棋书画}】</font>开<font color="#ff0000">:？00准</font></font></p>\n<hr>\n`,
       groups: [{ data: ["琴","棋","书","画"], count: 3 }]
     },
     风雨雷电: {
       id: "output风雨雷电",
       title: "风雨雷电",
       format: (ky, 风雨雷电) =>
-        `<p style="font-size:12pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 风雨雷电【<span style="color:#f00;">${风雨雷电}</span>】 开:<span style="color:#f00;">？00</span>准</p>\n<hr>\n`,
+        `<p style="font-size: 13pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 风雨雷电【<span style="color:#f00;">${风雨雷电}</span>】 开:<span style="color:#f00;">？00</span>准</p>\n<hr>\n`,
       groups: [{ data: ["风","雨","雷","电"], count: 3 }]
     },
     笔墨纸砚: {
       id: "output笔墨纸砚",
       title: "笔墨纸砚",
       format: (ky, 笔墨纸砚) =>
-        `<p style="font-size:12pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 笔墨纸砚【<span style="color:#f00;">${笔墨纸砚}</span>】 开:<span style="color:#f00;">？00</span>准</p>\n<hr>\n`,
+        `<p style="font-size: 13pt;line-height:40px;color:#555555;">${String(ky).padStart(3,'0')}期: 笔墨纸砚【<span style="color:#f00;">${笔墨纸砚}</span>】 开:<span style="color:#f00;">？00</span>准</p>\n<hr>\n`,
       groups: [{ data: ["笔","墨","纸","砚"], count: 3 }]
     },
     梅兰竹菊: {
       id: "output梅兰竹菊",
       title: "梅兰竹菊",
       format: (ky, 梅兰竹菊) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：梅兰竹菊<span style="color: #ff0000;">【${梅兰竹菊}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：梅兰竹菊<span style="color: #ff0000;">【${梅兰竹菊}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["梅","兰","竹","菊"], count: 3 }]
     },
     九肖中特: {
       id: "output九肖中特",
       title: "九肖中特",
       format: (ky, 九肖中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：九肖中特<span style="color: #ff0000;">【${九肖中特}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：九肖中特<span style="color: #ff0000;">【${九肖中特}】</span>开<span style="color: #ff0000;">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"], count: 9 }]
     },
     三门中特: {
       id: "output三门中特",
       title: "三门中特",
       format: (ky, 三门中特) =>
-        `<p style="font-size: 12pt; line-height: 40px;color: #555555;">${String(ky).padStart(3,'0')}期：三门中特<span style="color: red">【${三门中特}门】</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px;color: #555555;">${String(ky).padStart(3,'0')}期：三门中特<span style="color: red">【${三门中特}门】</span>开:<span style="color: #ff0000;">？00准</span></p>\n<hr>\n`,
       groups: [{
         data: ["1","2","3","4","5"],
         count: 3,
@@ -740,7 +740,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  const sorted = [...nums].sort((a, b) => Number(a) - Number(b));
 	  const line1 = sorted.slice(0, 12).join(sep);
 	  const line2 = sorted.slice(12, 24).join(sep);
-	  return `<p style="font-size: 12pt; line-height: 30px;">${String(ky).padStart(3,'0')}期：【精选24码】开：<span style="color: #FF0000; background-color: #FFE500">？00</span>准<br>${line1}<br>${line2}</span></p>\n<hr>\n`;
+	  return `<p style="font-size: 13pt; line-height: 30px;">${String(ky).padStart(3,'0')}期：【精选24码】开：<span style="color: #FF0000; background-color: #FFE500">？00</span>准<br>${line1}<br>${line2}</span></p>\n<hr>\n`;
 	},
 	  groups: [{
 	    data: [
@@ -807,28 +807,28 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output三头中特",
       title: "三头中特",
       format: (ky, 三头中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：三头中特<span style="color:#ff0000">【${三头中特}头】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：三头中特<span style="color:#ff0000">【${三头中特}头】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: [0,1,2,3,4], count: 3, sort: true }]
     },
     五尾中特: {
       id: "output五尾中特",
       title: "五尾中特",
       format: (ky, 五尾中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：五尾中特<span style="color:#ff0000">【${五尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：五尾中特<span style="color:#ff0000">【${五尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: [0,1,2,3,4,5,6,7,8,9], count: 5, sort: true }]
     },
     六尾中特: {
       id: "output六尾中特",
       title: "六尾中特",
       format: (ky, 六尾中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：六尾中特<span style="color:#ff0000">【${六尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：六尾中特<span style="color:#ff0000">【${六尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: [0,1,2,3,4,5,6,7,8,9], count: 6, sort: true }]
     },
     七尾中特: {
       id: "output七尾中特",
       title: "七尾中特",
       format: (ky, 七尾中特) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：七尾中特<span style="color:#ff0000">【${七尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：七尾中特<span style="color:#ff0000">【${七尾中特}】</span><span style="color:#0000FF">开</span><span style="color:#ff0000">:？00准</span></p>\n<hr>\n`,
       groups: [{ data: [0,1,2,3,4,5,6,7,8,9], count: 7, sort: true }]
     },
     五肖五码: {
@@ -865,7 +865,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
     const animalStr = pairs.map(p => p.animal).join("");
     const numsStr = pairs.map(p => String(p.num).padStart(2, "0")).join(".");
 
-    return `<p style="font-size: 12pt; line-height: 35px; color: #555; font-weight: bold;">${String(ky).padStart(3,'0')}期<span style="color: rgb(99, 135, 205);">【五肖五码】</span>特开:<span style="color: red;">？00准</span><br><span style="color: red;">${animalStr}【${numsStr}】</span></p>\n<hr>\n`;
+    return `<p style="font-size: 13pt; line-height: 35px; color: #555; font-weight: bold;">${String(ky).padStart(3,'0')}期<span style="color: rgb(99, 135, 205);">【五肖五码】</span>特开:<span style="color: red;">？00准</span><br><span style="color: red;">${animalStr}【${numsStr}】</span></p>\n<hr>\n`;
   },
   groups: [
     {
@@ -879,14 +879,14 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
       id: "output无错5段",
       title: "无错5段",
       format: (ky, 无错5段) =>
-        `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:无错⑤段<span style="color: #ff0000">【${无错5段}】</span>开:<span style="color:#ff0000">？00准</span></span></p>\n<hr>\n`,
+        `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期:无错⑤段<span style="color: #ff0000">【${无错5段}】</span>开:<span style="color:#ff0000">？00准</span></span></p>\n<hr>\n`,
       groups: [{ data: [1,2,3,4,5,6,7], count: 5, sort: true }]
     },
 	大小两肖: {
 	  id: "output大小两肖",
 	  title: "大小两肖",
 	  format: (ky, 大小, 生肖) => {
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：大小+两肖<span style="color:#ff0000;">【${大小}+${生肖}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：大小+两肖<span style="color:#ff0000;">【${大小}+${生肖}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["大数","小数"], count: 1 },  // chọn to/nhỏ
@@ -897,7 +897,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  id: "output合单合双两肖",
 	  title: "合单合双两肖",
 	  format: (ky, 合单合双, 生肖) => {
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：合单合双+两肖<span style="color:#ff0000;">【${合单合双}+${生肖}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：合单合双+两肖<span style="color:#ff0000;">【${合单合双}+${生肖}】</span>开</span><span style="color: red">:？00准</span></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["合单","合双"], count: 1 },  // chọn to/nhỏ
@@ -910,7 +910,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 男女, 男肖, 女肖) => {
 	    const animalsRaw = (男女 === "男肖") ? 女肖 : 男肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：男女两肖<font color="#ff0000">【${男女}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：男女两肖<font color="#ff0000">【${男女}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["男肖","女肖"], count: 1 },            
@@ -924,7 +924,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 胆大胆小, 胆大, 胆小) => {
 	    const animalsRaw = (胆大胆小 === "胆大") ? 胆小 : 胆大;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：胆大胆小两肖<font color="#ff0000">【${胆大胆小}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：胆大胆小两肖<font color="#ff0000">【${胆大胆小}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["胆大","胆小"], count: 1 },            
@@ -938,7 +938,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 家野, 家禽, 野兽) => {
 	    const animalsRaw = (家野 === "家禽") ? 野兽 : 家禽;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：家野两肖<font color="#ff0000">【${家野}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：家野两肖<font color="#ff0000">【${家野}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["家禽","野兽"], count: 1 },            
@@ -952,7 +952,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 独合, 独肖, 合肖) => {
 	    const animalsRaw = (独合 === "独肖") ? 合肖 : 独肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖<font color="#ff0000">【${独合}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖<font color="#ff0000">【${独合}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["独肖","合肖"], count: 1 },            
@@ -966,7 +966,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 吉凶, 吉肖, 凶肖) => {
 	    const animalsRaw = (吉凶 === "吉肖") ? 凶肖 : 吉肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：吉美凶丑两肖<font color="#ff0000">【${吉凶}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：吉美凶丑两肖<font color="#ff0000">【${吉凶}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["吉肖","凶肖"], count: 1 },            
@@ -980,7 +980,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 前后, 前肖, 后肖) => {
 	    const animalsRaw = (前后 === "前肖") ? 后肖 : 前肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：前后两肖<font color="#ff0000">【${前后}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：前后两肖<font color="#ff0000">【${前后}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["前肖","后肖"], count: 1 },            
@@ -994,7 +994,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 文武, 文官, 武将) => {
   const animalsRaw = (文武 === "文官") ? 武将 : 文官;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：文武两肖<font color="#ff0000">【${文武}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：文武两肖<font color="#ff0000">【${文武}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["文官","武将"], count: 1 },            
@@ -1008,7 +1008,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 阴阳, 阴肖, 阳肖) => {
 	    const animalsRaw = (阴阳 === "阴肖") ? 阳肖 : 阴肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：阴阳两肖<font color="#ff0000">【${阴阳}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：阴阳两肖<font color="#ff0000">【${阴阳}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["阴肖","阳肖"], count: 1 },            
@@ -1022,7 +1022,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 独合, 独肖, 合肖) => {
 	    const animalsRaw = (独合 === "独肖") ? 合肖 : 独肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖<font color="#ff0000">【${独合}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：独合两肖<font color="#ff0000">【${独合}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["独肖","合肖"], count: 1 },            
@@ -1036,7 +1036,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 单双, 单肖, 双肖) => {
 	    const animalsRaw = (单双 === "单肖") ? 双肖 : 单肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双两肖<font color="#ff0000">【${单双}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：单双两肖<font color="#ff0000">【${单双}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["单肖","双肖"], count: 1 },            
@@ -1050,7 +1050,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 上下, 上肖, 下肖) => {
 	    const animalsRaw = (上下 === "上肖") ? 下肖 : 上肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：上下两肖<font color="#ff0000">【${上下}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：上下两肖<font color="#ff0000">【${上下}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["上肖","下肖"], count: 1 },            
@@ -1064,7 +1064,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 有无, 有肖, 无肖) => {
 	    const animalsRaw = (有无 === "有肖") ? 无肖 : 有肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：有无两肖<font color="#ff0000">【${有无}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：有无两肖<font color="#ff0000">【${有无}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["有肖","无肖"], count: 1 },            
@@ -1078,7 +1078,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 天地, 天肖, 地肖) => {
 	    const animalsRaw = (天地 === "天肖") ? 地肖 : 天肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：天地两肖<font color="#ff0000">【${天地}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：天地两肖<font color="#ff0000">【${天地}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["天肖","地肖"], count: 1 },            
@@ -1092,7 +1092,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 左右, 左肖, 右肖) => {
 	    const animalsRaw = (左右 === "左肖") ? 右肖 : 左肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：左右两肖<font color="#ff0000">【${左右}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：左右两肖<font color="#ff0000">【${左右}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["左肖","右肖"], count: 1 },            
@@ -1106,7 +1106,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 黑白, 黑肖, 白肖) => {
 	    const animalsRaw = (黑白 === "黑肖") ? 白肖 : 黑肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：黑白两肖<font color="#ff0000">【${黑白}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：黑白两肖<font color="#ff0000">【${黑白}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["黑肖","白肖"], count: 1 },            
@@ -1120,7 +1120,7 @@ const BAIXIAO = ["鼠","牛","鸡","虎","狗","猪"];   // 白肖
 	  format: (ky, 日夜, 日肖, 夜肖) => {
 	    const animalsRaw = (日夜 === "日肖") ? 夜肖 : 日肖;
 	    const animals = String(animalsRaw).replace(/\s+/g, ""); // bỏ mọi khoảng trắng
-	    return `<p style="font-size: 12pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：日夜两肖<font color="#ff0000">【${日夜}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
+	    return `<p style="font-size: 13pt; line-height: 40px; color: #555555;">${String(ky).padStart(3,'0')}期：日夜两肖<font color="#ff0000">【${日夜}+${animals}】</font>开:<font color="#FF0000">？00准</font></p>\n<hr>\n`;
 	  },
 	  groups: [
 	    { data: ["日肖","夜肖"], count: 1 },            
